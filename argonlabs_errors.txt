@@ -2,3 +2,5 @@
 - helm rollback - Error: release has no 0 version
     Лечение: kubectl get secrets -n unidownloader-portal-v2-feature-rkm-alert # получаем секрет с релизом хельма
              kubectl delete secret -n unidownloader-portal-v2-feature-rkm-alert sh.helm.release.v1.unidownloader-portal-v2.v1 # удаляем секрет с релизом хельма
+
+Всем, кто деплоет в кубер из jenkins, внимание. Я починил деплой, но нужно внести правки в Jenkinsfile как на скрине. Удалить обертку container("helm"){ } и поменять label на docker.
