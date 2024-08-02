@@ -1,0 +1,4 @@
+Ошибки Helm:
+- helm rollback - Error: release has no 0 version
+    Лечение: kubectl get secrets -n unidownloader-portal-v2-feature-rkm-alert # получаем секрет с релизом хельма
+             kubectl delete secret -n unidownloader-portal-v2-feature-rkm-alert sh.helm.release.v1.unidownloader-portal-v2.v1 # удаляем секрет с релизом хельма
